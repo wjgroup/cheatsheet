@@ -5,3 +5,4 @@ https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/Ruby-Cheatsheet.md
 ## besides
 
 * 0, empty string and empty array are all evaluate to true!
+* start website from folder: `ruby -run -e httpd . -p 5000`
