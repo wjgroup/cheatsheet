@@ -7,3 +7,7 @@ https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/python-cheatsheed.md
 ## Besides
 ### Install module when multi python version are installed
 `pythonx -m pip install <modulename>`
+
+### Serve current folder
+`python3 -m http.server`
+`python -m SimpleHTTPServer`
