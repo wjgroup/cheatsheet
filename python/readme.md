@@ -10,4 +10,5 @@ https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/python-cheatsheed.md
 
 ### Serve current folder
 `python3 -m http.server`
+
 `python -m SimpleHTTPServer`
