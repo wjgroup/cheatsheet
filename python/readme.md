@@ -23,8 +23,9 @@ class Server(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        r = 'hello world @ {}\n{}\n{}\n{}'
-        self.wfile.write(bytes(r.format(str(datetime.utcnow()), str(self.command), str(self.path), str(self.headers)), 'utf-8'))
+        template = 'hello world @ {}\n{}\n{}\n{}'
+        reqDetails = template.format(str(datetime.utcnow()), str(self.command), str(self.path), str(self.headers))
+        self.wfile.write(bytes(reqDetails, 'utf-8'))
         
         try:
             r = requests.get('http://worldclockapi.com/api/json/utc/now')
@@ -42,5 +43,4 @@ class Server(BaseHTTPRequestHandler):
 
 httpd = HTTPServer(('localhost', 8080), Server)
 httpd.serve_forever()
-
 ```
