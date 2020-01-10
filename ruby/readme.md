@@ -58,6 +58,8 @@ while session = server.accept
     session.print "Hello world! The time is #{Time.now}" #4
     session.print response
 
+    session.print File.read('150.txt')
+
     session.close
 end
 ```
